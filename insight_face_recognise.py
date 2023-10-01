@@ -64,7 +64,7 @@ for i, new_embedding in enumerate(new_embeddings):
     if match_found:
         x, y, width, height = new_faces[i].bbox.astype(int)
         # print(width,height)
-        cv2.rectangle(image_with_boxes, (x, y), (x + (width), y + (height)), (0, 255, 0), 2)
+        cv2.rectangle(image_with_boxes, (x, y), ((width), (height)), (0, 255, 0), 2)
         cv2.putText(image_with_boxes, name, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
     else:
         print('No match found for face', i)
